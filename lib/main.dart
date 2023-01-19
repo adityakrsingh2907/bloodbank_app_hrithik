@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Blood Bank App',
-      home: const MyHomePage(),
+      home: const OnboardingPage(),
     );
   }
 }
