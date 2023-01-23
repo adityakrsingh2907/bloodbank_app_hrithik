@@ -1,5 +1,6 @@
 import 'package:bloodbank_app/constants/onboardingdata.dart';
 import 'package:flutter/material.dart';
+import 'package:bloodbank_app/screens/onboardingscreen2.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
@@ -8,23 +9,19 @@ class OnboardingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          color: Colors.red,
-          width: double.infinity,
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: onboardingData
-                  .map(
-                    (singleOnboardingScreen) => onboardingWidget(
-                      imageUrl: singleOnboardingScreen["image_url"]!,
-                      text: singleOnboardingScreen["text"]!,
-                    ),
-                  )
-                  .toList(),
-            ),
-          ),
-        ),
+        child: InkWell(
+            onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => OnboardingPage2()),
+                ),
+            child: Container(
+              color: Colors.red,
+              width: double.infinity,
+              child: onboardingWidget(
+                imageUrl: onboardingData[0]["image_url"]!,
+                text: onboardingData[0]["text"]!,
+              ),
+            )),
       ),
     );
   }

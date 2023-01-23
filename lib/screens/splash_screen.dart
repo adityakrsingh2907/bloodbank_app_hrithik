@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:bloodbank_app/screens/onboardingscreen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -7,9 +10,20 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Center(
-          child: Image.asset(
-            "assets/bloodbank.png",
+        child: InkWell(
+          onTap: () => {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => OnboardingPage()))
+          },
+          // Timer(Duration(seconds: 2), () {
+          //   Navigator.push(context,
+          //       MaterialPageRoute(builder: (context) => OnboardingPage()));
+          // }),
+
+          child: Center(
+            child: Image.asset(
+              "assets/bloodbank.png",
+            ),
           ),
         ),
       ),

@@ -1,4 +1,5 @@
-import 'package:bloodbank_app/screens/onboardingscreen.dart';
+import 'package:bloodbank_app/screens/otpfirstscreen.dart';
+import 'package:bloodbank_app/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Blood Bank App',
-      home: const OnboardingPage(),
+      home: const SplashScreen(),
     );
   }
 }
