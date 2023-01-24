@@ -14,6 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Blood Bank App',
+      theme: ThemeData(
+        primaryColor: Colors.red,
+        primarySwatch: Colors.red,
+      ),
       home: const SplashScreen(),
     );
   }

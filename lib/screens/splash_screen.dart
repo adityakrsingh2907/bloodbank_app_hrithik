@@ -9,6 +9,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("Blood Bank App")),
       body: SafeArea(
         child: InkWell(
           onTap: () => {
